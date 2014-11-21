@@ -1,0 +1,19 @@
+/* CSS 주석 */
+/* CSS 이쁘게 만들기 위한 친구 */
+/* 명조체(serif) -> 고딕체(sans-serif) */
+
+body {
+    word-break: break-all;
+    font-family: sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+p {
+    font-size: 14px;
+    line-height: 16px;
+}
+
+:lang(en) {
+    font-family: helvetica neue, sans-serif;
+}
