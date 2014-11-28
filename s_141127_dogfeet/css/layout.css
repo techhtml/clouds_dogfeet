@@ -1,0 +1,63 @@
+/*
+ * selector {
+ *     styleName : styleValue
+ * }
+ */
+
+/*
+ * tag Selector
+ */
+div {}
+/*
+ * class Selector
+ */
+/*
+ * float 속성을 사용하는 방법 (가장 오래되고.. 전통적인...)
+ * 단점 : 1px이라도 잘못되면 레이아웃이 다 어그러짐(깨짐).
+ * 단점2: 부모가 자식을 몰라봐요. (패류..)
+ * 클리어픽스 (clearfix)
+ * 1. 부모에 overflow : hidden을 넣는다.
+ * 2. 부모에 height를 지정해준다.
+ */
+body {
+    margin:0;
+}
+.wrapper {
+    overflow:hidden;
+}
+.ly_left {
+    float:left;
+    width:50%;
+    height:30px;
+    background:#666;
+}
+.ly_right {
+    float:right;
+    width:50%;
+    height:30px;
+    background:#ed2000;
+}
+/*
+ * 2번째 : flex 사용하기
+ * flex의 단점 : IE9부터 지원
+ */
+.wrapper2 {
+    display:-ms-flex; /* 윈도우8폰 전용 */
+    display:-moz-flex; /* 파이어폭스 전용 */
+    display:-webkit-flex; /* 크롬, 사파리, 오페라 전용 */
+    display:flex; /* 표준 지원하는 브라우저 */
+    flex-wrap:wrap;
+}
+.ly_box {
+    -ms-flex:1;
+    -moz-flex:1;
+    -webkit-flex:1;
+    flex:1;
+    height:30px;
+    border-right:1px solid #666;
+    background:#efefef;
+}
+.ly_1{order:4}
+.ly_2{order:3}
+.ly_3{order:1}
+.ly_4{order:2}
