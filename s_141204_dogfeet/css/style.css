@@ -1,0 +1,135 @@
+/*
+ * box-model
+ */
+
+/*
+ * width (가로 길이)
+ * height (세로 높이)
+ * margin (콘텐츠와 콘텐츠 사이 간격)
+ * padding (콘텐츠와 박스 사이 간격)
+ * border (박스 외곽선)
+ */
+
+body {
+    margin: 0;
+    font-size:14px;
+}
+div {
+    font-size:0.9em;
+    /* 
+     * em은 부모의 폰트사이즈에 비례함
+     * 부모 폰트사이즈 : 16px / 1em : 16px
+     */
+    /*
+     * rem은 body 요소의 폰트 사이즈에 비례함.
+     */
+    /*
+     * height: 80px;
+     * 되도록이면 안쓰는걸 권장
+     */
+    /*
+     * margin-top:20px;
+     * margin-bottom:20px;
+     */
+    /* margin : {top} {right} {bottom} {left} */
+    margin:20px 0;
+    /*
+     * 만약... 상단 20px 하단 20px인데..
+     * 두개가 동시에 쓰일 경우..
+     * 합집합으로 적용이 된다.
+     */
+    /*
+     * padding-top:10px;
+     * padding-right:10px;
+     * padding-bottom:10px;
+     * padding-left:10px;
+     * padding : {top} {right} {bottom} {left}
+     */
+    padding:10px;
+    /*  
+     * border-top:1px solid #666;
+     * border-right:1px solid #666;
+     * border-bottom:1px solid #666;
+     * border-left:1px solid #666;
+     */
+    /*
+     * border : {stroke} {type} {color}
+     * border-width : {top} {right} {bottom} {left}
+     * border-style : {top} {right} {bottom} {left}
+     */
+    border:1px solid #666;
+    border-width:1px 1px 1px 1px;
+    /*
+     * box-sizing
+     * box-sizing: padding-box;
+     * box-sizing: border-box;
+     */
+    background: #fff;
+    word-break: break-all;
+}
+
+/*
+ * selector
+ */
+
+/*
+ * tag selector
+ * class selector
+ */
+
+div { }
+.class-name { }
+
+/*
+ * id selector
+ */
+#main { }
+
+/*
+ * pseudo selector
+ */
+div:first-child { color:#666 }
+div:last-child { color:#eb2000 }
+div:nth-child(2n) { background:#666 }
+
+/*
+ * Interactive selector
+ */
+
+div:hover {color:#fff}
+
+/*
+ * 인접 셀렉터
+ */
+
+.red {
+    background:red;
+}
+
+.red + div {
+    background:blue;
+}
+
+.blue {
+    background:skyblue;
+}
+
+.blue ~ div {
+    background:orange;
+    transition:1s margin;
+}
+
+.blue:hover ~ div {
+    margin-top:-20px;
+}
+
+
+
+
+
+
+
+
+
+
+

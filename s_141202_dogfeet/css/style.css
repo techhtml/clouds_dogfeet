@@ -1,0 +1,42 @@
+/* 주석 */
+
+/**
+ * Selector
+ */
+
+/* tag selector */
+div {
+
+}
+p {
+
+}
+
+/* class selector */
+.wrap {
+    clear:left;
+}
+.image {
+    width: 40px;
+    height: 40px;
+    background:skyblue;
+    float:left;
+}
+.parag {
+    float:left;
+}
+
+/* flex */
+.flex-wrap {
+    clear:left;
+    display:-ms-flex;
+    display:-moz-flex;
+    display:-webkit-flex;
+    display:flex;
+}
+
+.item {
+    flex:1;
+    height:40px;
+    background:skyblue;
+}
