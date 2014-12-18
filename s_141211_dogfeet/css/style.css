@@ -1,0 +1,94 @@
+body {
+    margin:0;
+    /* margin: 8px -> 0으로 초기화 */
+}
+.ani {
+    position:relative;
+    width:50px;
+    height:50px;
+    background:#000;
+    /* transition 예제 */
+    /*
+        transition: 1s all ease;
+        transition : {duration} {property} {timing}
+    */
+    /* transform */
+    -webkit-animation: personMove 4s infinite;
+    animation: personMove 4s infinite;
+}
+.menu {
+    position:absolute;
+    left:-100px;
+    top:0;
+    bottom:0;
+    width:100px;
+    background:#666;
+    -webkit-animation-duration:3s;
+    -webkit-animation-name:anime;
+    transition:1s all ease;
+}
+.menu:hover {
+    left:0;
+}
+.menu::after {
+    content:">";
+    position:absolute;
+    display:block;
+    right:-18px;
+    top:50%;
+    transform:translate(0, -50%);
+    padding:5px;
+    background:#999;
+}
+@-webkit-keyframes anime {
+    0%,75% {left:0}
+    100% {left:-100px}
+}
+/*
+.ani::before {
+    content:'';
+    display: block;
+    width:5px;
+    height:5px;
+    position:absolute;
+    left:0;
+    top:50%;
+    transform:translate(0,-50%);
+    background:#666;
+    border-radius:15px;
+}
+*/
+@-webkit-keyframes personMove {
+    0% {-webkit-transform:translate(0,0)}
+    25% {-webkit-transform:translate(100px,0)}
+    50% {-webkit-transform:translate(100px,100px)}
+    75% {-webkit-transform:translate(0,100px)}
+    100% {-webkit-transform:translate(0,0)}
+}
+@keyframes personMove {
+    0% {transform:translate(0,0)}
+    25% {transform:translate(100px,0)}
+    50% {transform:translate(100px,100px)}
+    75% {transform:translate(0,100px)}
+    100% {transform:translate(0,0)}
+}
+/* 
+트랜스폼 예제
+.ani:hover {
+    transform:translate3d(100px, 100px, 0) 
+              rotate(180deg)
+              scale(2, 2);
+}
+
+트랜지션 예제
+.ani:hover {
+    margin-left:80px;
+    background:#666;
+}
+*/
+
+/* 
+    transition :    
+    transform  :
+    animation  :
+*/

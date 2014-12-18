@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    color: #333;
+}
+
+h1,h2,p,ul,li,figure,figcaption {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: sans-serif;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+    transition: 1s all ease;
+}
+
+a:hover {
+    letter-spacing: 5px;
+}
+
+header {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color:rgba(255,255,255,0.8);
+}
+header h1 {}
+header h1 a {
+    display: block;
+    padding:6px 0 6px 15px;
+    font-weight:100;
+    text-justify:justfy;
+}
+header h1 a:hover {}
+header nav {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+header nav ul {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+}
+header nav ul li {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+header nav ul li a {
+    display: block;
+    padding: 15px 0;
+    text-align: center;
+    font-weight: 200;
+}
+header nav ul li a:hover {}
+main {
+    margin-top: 51px;
+}
